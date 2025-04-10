@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noir de Chocolat</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <span>Noir de Chocolat</span>
+        <img class="logo-image" src="./images/logo3.png" alt="" />
+      </div>
+      <nav class="container header-container navigation">
+        <img class="melted-img" src="./images/melted.png" alt="" />
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">How it's made?</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </nav>
+      <div class="toggleBox">
+        <a onclick="showMenu()" href="#"
+          ><img class="menu" src="./images/openMenu.svg" alt="" />
+          <img class="close" src="./images/closeMenu2.svg" alt=""
+        /></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-container">
+          <h1>Step into bliss</h1>
+          <div class="hero-description">
+            <p>
+              Not just a treat — a curated moment of joy and elegance. Indulge
+              in the chocolate you’ve always dreamed of.
+            </p>
+            <div class="hero-buttons">
+              <button>BUY NOW</button>
+              <button>CONTACT US</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <ul class="about-list">
+            <li class="about-list-item">
+              <div class="icon-box">
+                <img class="icon" src="./images/icon1.svg" />
+              </div>
+              <h3 class="about-title">Unsurpassed Taste</h3>
+              <p class="about-descripton">
+                Crafted with the finest quality cocoa beans and a dedication to
+                perfection, each bite is a decadent experience that simply
+                cannot be matched. Savor the richness and complexity of our
+                Unsurpassed Taste and discover a new level of chocolate bliss.
+              </p>
+            </li>
+            <li>
+              <div class="icon-box">
+                <img class="icon" src="./images/money.svg" />
+              </div>
+              <h3 class="about-title">Affordable price</h3>
+              <p class="about-descripton">
+                Indulge in high-quality chocolate without breaking the bank with
+                Noir de Chocolat's selection of affordable treats. Enjoy
+                mouth-watering truffles and velvety chocolate bars without
+                sacrificing taste or quality. Browse our selection and indulge
+                in affordable luxury today.
+              </p>
+            </li>
+            <li>
+              <div class="icon-box">
+                <img class="icon" src="./images/spoon.svg" />
+              </div>
+              <h3 class="about-title">Own production</h3>
+              <p class="about-descripton">
+                We take pride in our own production process, ensuring that every
+                step is carefully crafted to perfection. From selecting the
+                finest ingredients to handcrafting each piece, our attention to
+                detail is evident in every bite.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+<!-- <picture>
+  <source
+    media="(min-width: 1025px)"
+    srcset="./images/header-choco-desktop.webp"
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 769px)"
+    srcset="./images/header-choco-tablet.webp"
+    type="image/webp"
+  />
+  <img
+    src="images/header-choco-mobile.webp"
+    alt="Descriere imagine"
+    type="image/webp"
+  />
+</picture> -->

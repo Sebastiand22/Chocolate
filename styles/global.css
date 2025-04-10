@@ -1,0 +1,51 @@
+/* Resetare margini, padding și box model */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Resetează link-uri și butoane */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Imagini responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  /* Culori */
+  --color-text: #ffffff;
+  --color-bg: #1E1823;
+
+  /* Fonturi */
+  --font-main: 'Montserrat', sans-serif;
+
+  /* Spațiere */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  /* Breakpoints */
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
+}
+
+ul, li{
+  list-style: none; 
+  
+}
