@@ -181,9 +181,10 @@ nav.navigation.active a {
 /* ABOUT SECTION  */
 
 .about {
-  background: linear-gradient(203deg, #f8dbe8, #d8b4e2);
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
-    0 4px 10px rgba(134, 77, 173, 0.4);
+  background: linear-gradient(to bottom, #e4c1d9 0%, #d3bbdd 100%);
+
+  /* box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    0 4px 10px rgba(134, 77, 173, 0.4); */
   color: #6b1e7a;
   width: 100vw;
   position: relative;
@@ -216,6 +217,21 @@ nav.navigation.active a {
 
 /* Products Section */
 
+.products {
+  padding: 20px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  /* background: linear-gradient(to bottom, #D3BBDD 0%, #F9F5F6 100%); */
+}
+.products-title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -3%;
+  text-align: center;
+  text-transform: uppercase;
+}
 .card-image {
   width: 200px;
   margin: auto;
@@ -267,13 +283,9 @@ nav.navigation.active a {
   gap: 10px;
 }
 
-.products {
-  padding: 20px;
-}
-
 /* Stiluri pentru buton */
 .product-button {
-  background-color: rgb(255, 155, 4);
+  background-color: #a55dd1b8;
   color: #070707;
   padding: 10px 20px;
   border: none;
@@ -319,4 +331,149 @@ nav.navigation.active a {
   width: 29px;
   height: 29px;
   margin-left: 200px;
+}
+/* HOW ITS MADE SECTION */
+
+.made-title {
+  text-align: center;
+}
+
+.made-section {
+  padding: 20px 5px;
+}
+.hover-video {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.video-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hover-video {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgb(58 56 56 / 98%);
+}
+
+.made-description {
+  background: #f9f5f6;
+  border-radius: 1rem;
+
+  box-shadow: 0px 0px 18px 0px rgb(80 3 88 / 19%);
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4b2e2e;
+}
+
+.made-description:hover {
+  transform: translateY(-5px);
+}
+
+.made-description-title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #8c5e91; /* mov pastel */
+  text-align: center;
+}
+
+.made-list-item {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.made-list-item::before {
+  content: "🎂";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.made-list-item {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -2%;
+  list-style: none;
+}
+
+/* Footer section */
+
+.first-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-image: url("../images/footer-bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* TEXT CENTRALIZAT */
+.first-footer h2,
+.first-footer p,
+.first-footer button {
+  margin: 16px 0;
+}
+
+/* BUTON MOV STILAT */
+.first-footer button {
+  background-color: #3f2052;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.first-footer button:hover {
+  background-color: #7a31a8;
+}
+
+/* CONTACT + SOCIAL */
+.contact {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #7c4277;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact h2,
+.contact h3 {
+  color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-info span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: auto;
+  text-align: right;
 }
