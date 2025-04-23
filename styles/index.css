@@ -554,7 +554,6 @@ nav.navigation.active a {
   text-align: right;
 }
 
-
 /* Subscribe MODAL */
 
 /* Subscribe Modal Background */
@@ -572,8 +571,6 @@ nav.navigation.active a {
   display: none;
 }
 
-
-
 /* Modal Content */
 .subscribe-modal-content {
   background-color: #967c9b;
@@ -582,7 +579,6 @@ nav.navigation.active a {
   width: 300px;
   text-align: center;
   position: relative;
-  
 }
 
 .subscribe-modal-content h3 {
@@ -594,7 +590,6 @@ nav.navigation.active a {
   color: white;
   display: block;
   margin-bottom: 5px;
-  
 }
 
 .subscribe-modal-content input {
@@ -628,4 +623,237 @@ nav.navigation.active a {
   color: white;
   cursor: pointer;
   font-size: 18px;
+}
+
+/* DESIGN FOR TABLET */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+    padding: var(--space-lg);
+  }
+
+  .toggleBox {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+  /* Dezactivăm stilul fullscreen */
+
+  .navigation {
+    display: flex !important;
+    position: static;
+    background: transparent;
+    height: auto;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  /* Facem link-urile orizontale */
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li a {
+    color: #7c4277;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .nav-list li a:hover {
+    color: #bd86af;
+  }
+  .melted-img {
+    display: none;
+  }
+
+  .header-container,
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+
+  .hero-container h1 {
+    font-size: 56px;
+  }
+
+  .hero-buttons button {
+    font-size: 14px;
+    width: 120px;
+  }
+
+  .about {
+    padding: 40px;
+  }
+
+  .products-title {
+    font-size: 24px;
+  }
+
+  .products-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* spațiu între carduri */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-modal-content {
+    width: 70%;
+    height: auto;
+  }
+
+  .hover-video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px; /* dacă vrei colțuri rotunjite */
+  }
+
+  .subscribe-modal-content {
+    width: 400px;
+  }
+
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .contact-info,
+  .social {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    padding: var(--space-lg);
+  }
+
+  .logo-title{font-size: 45px;}
+  .logo-image{width: 80px;
+    height: 80px;}
+
+  .toggleBox {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    
+  }
+  /* Dezactivăm stilul fullscreen */
+
+  .navigation {
+    display: flex !important;
+    position: static;
+    background: transparent;
+    height: auto;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  /* Facem link-urile orizontale */
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li a {
+    color: #7c4277;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 8px 12px;
+  }
+
+  .nav-list li a:hover {
+    color: #bd86af;
+    
+  }
+  .melted-img {
+    display: none;
+  }
+
+  .header-container,
+  .header {
+    flex-direction: row;
+    padding: 10px 30px;
+  }
+
+  .hero-container h1 {
+    font-size: 56px;
+  }
+
+  .hero-buttons button {
+    font-size: 14px;
+    width: 120px;
+  }
+
+  .about {
+    padding: 40px;
+  }
+
+  .products-title {
+    font-size: 24px;
+  }
+
+  .products-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* spațiu între carduri */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-modal-content {
+    width: 70%;
+    height: auto;
+  }
+
+  .hover-video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px; /* dacă vrei colțuri rotunjite */
+  }
+
+  .subscribe-modal-content {
+    width: 400px;
+  }
+
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .contact-info,
+  .social {
+    flex: 1;
+  }
 }
