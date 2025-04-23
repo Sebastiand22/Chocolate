@@ -5,6 +5,19 @@ function showMenu() {
   document.querySelector(".close").classList.toggle("show");
 }
 
+// Închide meniul când dai click pe un link
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".navigation a");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      document.querySelector(".navigation").classList.remove("active");
+      document.querySelector(".menu").classList.remove("hide");
+      document.querySelector(".close").classList.remove("show");
+    });
+  });
+});
+
 // PRODUCTS MODAL
 const modal = document.getElementById("modalProduct");
 
@@ -25,11 +38,34 @@ span.onclick = function (event) {
 // HOVER VIDEO
 
 const video = document.querySelector(".hover-video");
-video.addEventListener('mouseenter', () => {
-  
+video.addEventListener("mouseenter", () => {
   video.play();
 });
-video.addEventListener('mouseleave', () => {
+video.addEventListener("mouseleave", () => {
   video.pause();
-  
 });
+
+// Subscribe MODAL
+
+const subscribeModal = document.getElementById("subscribeModal");
+const subscribeBtn = document.getElementById("subscribeBtn");
+const subscribeCloseButton = document.querySelector(".close-subscribe-button");
+
+// Când utilizatorul apasă pe butonul de subscribe, deschide modalul
+subscribeBtn.onclick = function () {
+  
+  subscribeModal.style.display = "flex";
+};
+
+// Când utilizatorul apasă pe X pentru a închide modalul
+subscribeCloseButton.onclick = function () {
+   console.log("Button clicked")
+  subscribeModal.style.display = "none";
+};
+
+// Dacă utilizatorul dă click în afara modalului, acesta se va închide
+window.onclick = function (event) {
+  if (event.target === subscribeModal) {
+    subscribeModal.style.display = "none";
+  }
+};

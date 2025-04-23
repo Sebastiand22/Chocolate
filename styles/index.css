@@ -6,7 +6,11 @@ body {
 }
 .melted-img {
   position: absolute;
-  top: 0px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none; /* Asta e cheia! */
+  z-index: -1;
 }
 .container {
   margin-left: auto;
@@ -69,20 +73,6 @@ img.close.show {
 nav.navigation {
   display: none;
 }
-nav.navigation.active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: fixed;
-  gap: 30px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #7c4277;
-  z-index: 1;
-}
 
 nav.navigation.active a {
   padding: 20px;
@@ -97,6 +87,41 @@ nav.navigation.active a {
   right: 20px;
   z-index: 9999;
 }
+.navigation {
+  display: none;
+}
+
+.navigation.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100; /* ca să fie peste tot */
+  background-color: #7c4277;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative; /* Doar aici! */
+  z-index: 2; /* Ca să fie peste imagine */
+  align-items: center;
+}
+
+.melted-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* sub linkuri */
+  pointer-events: none; /* NU blochează click-uri */
+}
 
 /* HERO SECTION */
 
@@ -104,7 +129,7 @@ nav.navigation.active a {
   width: 100%;
   height: auto;
   min-height: 500px;
-  background-image: url(../images/hero-chocolate.webp);
+  background-image: url(../images/headerphoto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -151,12 +176,10 @@ nav.navigation.active a {
   margin-top: 20px;
   font-size: 76px;
   font-family: "Montserrat", sans-serif;
-  color: #e9c8e4b5;
-  transform: rotate(16deg);
+  color: #000000cf;
   display: block;
-  opacity: 50%;
-  margin-left: 10px;
-  text-align: center;
+  opacity: 19%;
+  margin-left: 4px;
 }
 .hero-buttons button {
   background: linear-gradient(145deg, #b551a0, #db82a5ab);
@@ -293,13 +316,15 @@ nav.navigation.active a {
   font-size: 16px;
   cursor: pointer;
   display: block;
-  margin: 20px auto; /* Centering the button */
+  margin: 50px auto;
 }
 
 /* Container pentru buton pentru a-l poziționa corect */
+
 .button-container {
-  text-align: center; /* Centering the button */
-  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
 }
 
 /* The Modal (background) */
@@ -318,20 +343,71 @@ nav.navigation.active a {
 
 /* Modal Content/Box */
 .product-modal-content {
-  background-color: #797481;
+  background-color: #967c9b;
   margin: 15% auto;
   padding: 23px;
-  border: 7px solid #ede6e654;
+  position: relative;
   width: 80%;
   height: 600px;
-  opacity: 90%;
+  border-radius: 22px;
 }
-
+.close-modal-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 3;
+}
 .close-modal-img {
   width: 29px;
   height: 29px;
-  margin-left: 200px;
 }
+
+/* Formularul de cumpărare */
+.buy-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: calc(
+    100% - 50px
+  ); /* Ocupă tot spațiul rămas din modal, lăsând un pic pentru marginea de sus */
+  padding: 20px;
+  background-color: #967c9b; /* Culoare similară cu cea a modalului */
+  border-radius: 20px;
+}
+
+.buy-form label {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.buy-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: #333;
+}
+
+.buy-form button {
+  background-color: #7c4277; /* Culoare similară cu fundalul modalului */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-form button:hover {
+  background-color: #9e6fa3; /* Culoare la hover */
+}
+
 /* HOW ITS MADE SECTION */
 
 .made-title {
@@ -476,4 +552,80 @@ nav.navigation.active a {
   gap: 10px;
   margin-left: auto;
   text-align: right;
+}
+
+
+/* Subscribe MODAL */
+
+/* Subscribe Modal Background */
+.subscribe-modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+
+
+/* Modal Content */
+.subscribe-modal-content {
+  background-color: #967c9b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  
+}
+
+.subscribe-modal-content h3 {
+  margin: 0 0 15px;
+  color: white;
+}
+
+.subscribe-modal-content label {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+  
+}
+
+.subscribe-modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.subscribe-modal-content button {
+  background-color: #7c4277;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.subscribe-modal-content button:hover {
+  background-color: #9e6fa3;
+}
+
+/* Close button */
+.close-subscribe-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
 }
