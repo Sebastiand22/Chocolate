@@ -255,6 +255,8 @@ nav.navigation.active a {
   text-align: center;
   text-transform: uppercase;
 }
+.products-list-card-desktop{display: none;}
+
 .card-image {
   width: 200px;
   margin: auto;
@@ -742,38 +744,58 @@ nav.navigation.active a {
 
 @media (min-width: 1024px) {
   body {
-    font-size: 20px;
-    padding: var(--space-lg);
+    font-size: 16px;
+  }
+  .logo-image {
+    width: 60px;
+    height: 60px;
+  }
+  .logo {
+    font-size: 36px;
+  }
+  .hero {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 900px;
+    background-image: url(../images/headerphoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 25px;
+    position: relative;
   }
 
-  .logo-title{font-size: 45px;}
-  .logo-image{width: 80px;
-    height: 80px;}
+  .header-container,
+  .header {
+    padding: 20px 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .toggleBox {
     display: none;
   }
 
-  .nav-list {
-    display: flex;
-    
-  }
-  /* Dezactivăm stilul fullscreen */
-
-  .navigation {
+  nav.navigation {
     display: flex !important;
     position: static;
-    background: transparent;
+    background: none;
     height: auto;
-    justify-content: flex-end;
     flex: 1;
+    justify-content: flex-end;
   }
 
-  /* Facem link-urile orizontale */
   .nav-list {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
     list-style: none;
     margin: 0;
@@ -784,76 +806,119 @@ nav.navigation.active a {
     color: #7c4277;
     font-weight: bold;
     text-decoration: none;
-    font-size: 30px;
-    padding: 8px 12px;
+    font-size: 18px;
+    padding: 8px 16px;
   }
 
   .nav-list li a:hover {
     color: #bd86af;
-    
   }
+
   .melted-img {
     display: none;
   }
 
-  .header-container,
-  .header {
-    flex-direction: row;
-    padding: 10px 30px;
+  .hero {
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 40px;
   }
 
   .hero-container h1 {
-    font-size: 56px;
+    font-size: 80px;
+    margin-top: 40px;
+  }
+
+  .hero-buttons {
+    margin-top: 30px;
   }
 
   .hero-buttons button {
-    font-size: 14px;
-    width: 120px;
+    font-size: 16px;
+    width: 140px;
+    height: 45px;
   }
 
   .about {
-    padding: 40px;
+    background: linear-gradient(to bottom, #e4c1d9 0%, #d3bbdd 100%);
+    color: #6b1e7a;
+    width: 100%; /* Lățimea elementului va fi 100% din containerul părinte */
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 50px auto 0; /* Centrează elementul pe orizontală */
+    padding: 20px;
+    left: 0;
+    right: 0;
   }
 
+  .about-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  
   .products-title {
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 40px;
   }
 
   .products-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; /* spațiu între carduri */
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .flip-card {
+    height: 350px;
   }
 
   .product-modal-content {
-    width: 70%;
+    width: 500px;
     height: auto;
   }
 
   .hover-video {
-    width: 100%;
-    max-width: 960px;
-    height: auto;
-    display: block;
+    max-width: 700px;
     margin: 0 auto;
-    border-radius: 12px; /* dacă vrei colțuri rotunjite */
   }
 
-  .subscribe-modal-content {
-    width: 400px;
+  .made-description {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .made-description-title {
+    font-size: 24px;
+  }
+
+  .first-footer {
+    padding: 80px 20px;
+  }
+
+  .first-footer h2 {
+    font-size: 32px;
+  }
+
+  .first-footer p {
+    font-size: 18px;
   }
 
   .contact {
+    padding: 60px 80px;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
+    gap: 60px;
   }
 
   .contact-info,
   .social {
     flex: 1;
   }
+
+  .subscribe-modal-content {
+    width: 500px;
+  }
 }
+
+.products-list-card-desktop{display: block;}
