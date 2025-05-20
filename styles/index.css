@@ -255,7 +255,9 @@ nav.navigation.active a {
   text-align: center;
   text-transform: uppercase;
 }
-.products-list-card-desktop{display: none;}
+.products-list-card-desktop {
+  display: none;
+}
 
 .card-image {
   width: 200px;
@@ -626,12 +628,16 @@ nav.navigation.active a {
   cursor: pointer;
   font-size: 18px;
 }
-.creator-name{width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    background-color: #7c4277;
-    color: white;}
-    .creator-name span{ display: flex;
-    justify-content: center;}
+.creator-name {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #7c4277;
+  color: white;
+}
+.creator-name span {
+  display: flex;
+  justify-content: center;
+}
 
 /* DESIGN FOR TABLET */
 
@@ -746,11 +752,13 @@ nav.navigation.active a {
   .social {
     flex: 1;
   }
-  .creator-name span{font-size:18px}
+  .creator-name span {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1024px) {
-   body {
+  body {
     font-size: 16px;
   }
   .logo-image {
@@ -864,7 +872,6 @@ nav.navigation.active a {
     text-align: center;
   }
 
-  
   .products-title {
     font-size: 28px;
     margin-bottom: 40px;
@@ -885,25 +892,25 @@ nav.navigation.active a {
     height: auto;
   }
 
-.made-section {
-  padding: 20px 5px;
-}
-.hover-video {
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-.video-section {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
+  .made-section {
+    padding: 20px 5px;
+  }
+  .hover-video {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  .video-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
 
-.hover-video {
-  width:40%;
-  border-radius: 16px;
- height: 700px;
-  box-shadow: 0 0 20px rgb(58 56 56 / 98%);
-}
+  .hover-video {
+    width: 40%;
+    border-radius: 16px;
+    height: 700px;
+    box-shadow: 0 0 20px rgb(58 56 56 / 98%);
+  }
 
   .made-description {
     max-width: 700px;
@@ -942,14 +949,26 @@ nav.navigation.active a {
     width: 500px;
   }
 
-
-.products-list-card-desktop{display: block;} 
+  .products-list-card-desktop {
+    display: block;
+  }
 }
 
-.social{font-size: 20px;}
-.contact-info{font-size: 20px;}
- .creator-name span{font-size:20px}
+.social {
+  font-size: 20px;
+}
+.contact-info {
+  font-size: 20px;
+}
 
- .product-button{width: 150px;
-    height: 82px;
-    font-size: 20px;}
+.creator-name span {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-button {
+  width: 150px;
+  height: 82px;
+  font-size: 20px;
+}
