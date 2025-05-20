@@ -548,6 +548,7 @@ nav.navigation.active a {
 .contact-info span {
   display: block;
   margin-bottom: 10px;
+  
 }
 
 .social {
@@ -644,7 +645,6 @@ nav.navigation.active a {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 15px;
-    padding: var(--space-lg);
   }
 
   .toggleBox {
@@ -760,6 +760,7 @@ nav.navigation.active a {
 @media (min-width: 1024px) {
   body {
     font-size: 16px;
+    padding:0px;
   }
   .logo-image {
     width: 60px;
@@ -952,7 +953,7 @@ nav.navigation.active a {
   .products-list-card-desktop {
     display: block;
   }
-}
+
 
 .social {
   font-size: 20px;
@@ -971,4 +972,5 @@ nav.navigation.active a {
   width: 150px;
   height: 82px;
   font-size: 20px;
+}
 }
